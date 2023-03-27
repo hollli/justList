@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="520px"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+
+
+        app:layout_constraintEnd_toStartOf="@+id/editPoint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:onClick="remove"
+        android:text="del"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/editPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="editPoint"
+        android:text="edit Point"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subject"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:onClick="add"
+        android:text="add"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/editPoint"
+        tools:ignore="HardcodedText,MissingConstraints,UsingOnClickInXml" />
+    <ListView
+        android:id="@+id/usersList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintTop_toBottomOf="@+id/subject"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="AdapterViewChildren">
+
+
+
+    </ListView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
